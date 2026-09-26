@@ -1,0 +1,2 @@
+# Application code is included by PHP only; never served directly.
+Require all denied
