@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day of Birth Calculator — What Day of the Week Was I Born?</title>
+<meta name="description" content="Find the day of the week you were born, plus the day of the year, ISO week number and whether it was a leap year. Works for any date from year 1 to 9999.">
+<link rel="canonical" href="https://easycalculatorsmart.com/day-of-birth-calculator/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Day of Birth Calculator — What Day of the Week Was I Born?">
+<meta property="og:description" content="Find the day of the week you were born, plus the day of the year, ISO week number and whether it was a leap year. Works for any date from year 1 to 9999.">
+<meta property="og:url" content="https://easycalculatorsmart.com/day-of-birth-calculator/">
+<meta property="og:site_name" content="EasyCalculatorSmart">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem('ecs-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="stylesheet" href="/assets/css/age-dob.css?v=2026.09.26">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://easycalculatorsmart.com/day-of-birth-calculator/#webpage","url":"https://easycalculatorsmart.com/day-of-birth-calculator/","name":"Day of Birth Calculator — What Day of the Week Was I Born?","description":"Find the day of the week you were born, plus the day of the year, ISO week number and whether it was a leap year. Works for any date from year 1 to 9999.","dateModified":"2026-09-26","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"EasyCalculatorSmart","url":"https://easycalculatorsmart.com/"}},{"@type":"SoftwareApplication","name":"Day of Birth Calculator","url":"https://easycalculatorsmart.com/day-of-birth-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Find the day of the week you were born, plus the day of the year, ISO week number and whether it was a leap year. Works for any date from year 1 to 9999."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://easycalculatorsmart.com/"},{"@type":"ListItem","position":2,"name":"Date \u0026 Time Calculators","item":"https://easycalculatorsmart.com/date-of-birth-calculator/"},{"@type":"ListItem","position":3,"name":"Day of Birth Calculator","item":"https://easycalculatorsmart.com/day-of-birth-calculator/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What day of the week was I born?","acceptedAnswer":{"@type":"Answer","text":"Enter your date of birth and the weekday appears immediately. It is computed from a fixed day count, not looked up in a table, so it works for any Gregorian date."}},{"@type":"Question","name":"What is the ISO week number?","acceptedAnswer":{"@type":"Answer","text":"ISO 8601 numbers weeks from Monday, and week 1 is the week containing 4 January. That is why 31 December can be in week 1 of the next year."}},{"@type":"Question","name":"Does this work for very old dates?","acceptedAnswer":{"@type":"Answer","text":"The tool uses the Gregorian calendar for every date (the “proleptic” Gregorian calendar). Countries switched from the Julian calendar at different times — Britain and its colonies in 1752 — so historic records written in the Julian calendar can show a different weekday."}},{"@type":"Question","name":"Why does my birthday move one weekday each year?","acceptedAnswer":{"@type":"Answer","text":"A common year is 52 weeks and 1 day, so a birthday moves forward one weekday; after a 29 February it moves two."}}]}]}</script>
+</head>
+<body class="adob-body">
+<a class="adob-skip" href="#adob-calc">Skip to calculator</a>
+<header class="adob-topbar">
+  <a class="adob-brand" href="/">EasyCalculatorSmart</a>
+  <button type="button" class="adob-theme" data-adob-theme aria-label="Toggle dark or light theme">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+  </button>
+</header>
+
+<main class="adob" data-mode="weekday">
+  <nav class="adob-crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/date-of-birth-calculator/">Date &amp; Time</a></li>
+      <li aria-current="page">Day of Birth Calculator</li>
+    </ol>
+  </nav>
+
+  <section class="adob-hero">
+    <div class="adob-hero-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M7 14h2M11 14h2M15 14h2M7 17.5h2"/><rect x="10.5" y="16.5" width="3" height="2.5" rx=".6"/></svg>
+    </div>
+    <div>
+      <p class="adob-kicker">What day was I born?</p>
+      <h1>Day of Birth Calculator</h1>
+      <p class="adob-lead">Enter a date of birth to find the weekday you were born on, the day of the year, the ISO week number and how often your birthday lands on each weekday.</p>
+      <ul class="adob-badges" aria-label="Page features">
+        <li>Instant calculation</li><li>Runs in your browser</li><li>No sign-up</li><li>Leap-year aware</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="adob-calc" id="adob-calc" aria-labelledby="adob-calc-h">
+  <h2 id="adob-calc-h" class="adob-sr">Calculator</h2>
+  <form class="adob-form" data-adob-form novalidate autocomplete="off">
+    <div class="adob-row adob-row--dates">
+      <div class="adob-field adob-date" data-adob-date="dob">
+        <label for="adob-dob">Date of birth</label>
+        <div class="adob-date-wrap">
+          <input id="adob-dob" type="text" inputmode="numeric" data-adob-text aria-describedby="adob-dob-echo" required>
+          <span class="adob-picker">
+            <input type="date" data-adob-picker min="0001-01-01" max="9999-12-31" aria-label="Pick date of birth from calendar" tabindex="-1">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          </span>
+        </div>
+        <output id="adob-dob-echo" class="adob-echo" data-adob-echo aria-live="polite"></output>
+      </div>
+
+          </div>
+
+    <div class="adob-row adob-row--settings">
+      <div class="adob-field">
+        <label for="adob-country">Country / region</label>
+        <select id="adob-country" data-adob-country>
+                    <option value="us" selected>United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                    <option value="in">India</option>
+                    <option value="au">Australia</option>
+                    <option value="nz">New Zealand</option>
+                    <option value="intl">Other / ISO</option>
+                  </select>
+      </div>
+      <div class="adob-field">
+        <label for="adob-format">Date format</label>
+        <select id="adob-format" data-adob-format>
+                    <option value="MDY" selected>MM/DD/YYYY</option>
+                    <option value="DMY">DD/MM/YYYY</option>
+                    <option value="YMD">YYYY-MM-DD</option>
+                  </select>
+      </div>
+      <div class="adob-field">
+        <label for="adob-rule">29 Feb &amp; month-end rule</label>
+        <select id="adob-rule" data-adob-rule aria-describedby="adob-rule-help">
+          <option value="clamp" selected>Last day of month (Feb 28)</option>
+          <option value="rollover">Next day (Mar 1)</option>
+        </select>
+        <small id="adob-rule-help">Used only when a date does not exist in a month, e.g. a 29 Feb birthday in a common year.</small>
+      </div>
+    </div>
+
+        <div class="adob-presets" role="group" aria-label="Examples">
+            <button type="button" class="adob-chip" data-adob-preset="ex-1990">Example 1990</button>
+            <button type="button" class="adob-chip" data-adob-preset="ex-2000">Example 2000</button>
+            <button type="button" class="adob-chip" data-adob-preset="leap">Leap day</button>
+            <button type="button" class="adob-chip" data-adob-preset="newborn">Newborn</button>
+          </div>
+    
+    
+    
+    <div class="adob-actions-row">
+      <label class="adob-check"><input type="checkbox" data-adob-remember> Remember on this device</label>
+      <button type="button" class="adob-btn adob-btn--ghost" data-adob-reset>Reset</button>
+    </div>
+  </form>
+
+  <div class="adob-error" role="alert" data-adob-error hidden></div>
+  <div class="adob-sr" aria-live="polite" data-adob-announce></div>
+
+  <div class="adob-results" data-adob-results hidden>
+    
+    
+    
+        <div class="adob-born">
+      <ol class="adob-week" data-r="week" aria-label="Weekday of birth"></ol>
+      <dl class="adob-facts" data-r="born"></dl>
+    </div>
+    
+        <div class="adob-table-wrap"><table class="adob-table" data-r="weekdayTable"><caption>The weekday of your next 10 birthdays</caption></table></div>
+    
+    
+    
+    <details class="adob-work">
+      <summary>How was this calculated?</summary>
+      <ol data-r="work"></ol>
+    </details>
+
+    <div class="adob-share">
+      <label class="adob-check"><input type="checkbox" data-adob-share-dob> Include date of birth when copying or sharing</label>
+      <div class="adob-share-btns">
+        <button type="button" class="adob-btn" data-adob-copy>Copy result</button>
+        <button type="button" class="adob-btn" data-adob-share>Share</button>
+        <button type="button" class="adob-btn" data-adob-print>Print</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <article class="adob-article">
+    <section aria-labelledby="d-how">
+  <h2 id="d-how">How the weekday of a date is found</h2>
+  <p>Weekdays repeat every seven days without exception, so the weekday of any date can be found by counting days from a date whose weekday is known. This calculator converts your date of birth into a day number — the count of days since Thursday 1 January 1970 — using an exact formula for the Gregorian calendar (the widely used <code>days_from_civil</code> algorithm), then takes the remainder after dividing by seven. No lookup tables or external services are involved, so it works the same for 1850, 2000 or 2400.</p>
+  <p>The same day number gives the <strong>day of the year</strong> (1 January is day 1; 31 December is day 365, or 366 in a leap year) and the <strong>ISO week number</strong>.</p>
+</section>
+
+<section aria-labelledby="d-iso">
+  <h2 id="d-iso">ISO week numbers</h2>
+  <p>ISO 8601 weeks start on Monday, and week 1 is the week that contains 4 January (equivalently, the first week with a Thursday). As a result the first days of January can belong to the last week of the previous year, and the last days of December to week 1 of the next. 31 December 2024 is in ISO week 1 of 2025, and 3 January 2021 is in week 53 of 2020 — the calculator shows the week-year whenever it differs from the calendar year.</p>
+</section>
+
+<section aria-labelledby="d-ex">
+  <h2 id="d-ex">Examples</h2>
+  <div class="adob-scroll">
+  <table>
+    <caption class="adob-sr">Example dates and their weekdays</caption>
+    <thead><tr><th scope="col">Date</th><th scope="col">Weekday</th><th scope="col">Day of year</th><th scope="col">ISO week</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">15 January 1990</th><td>Monday</td><td>15</td><td>3</td></tr>
+      <tr><th scope="row">24 September 2000</th><td>Sunday</td><td>268</td><td>38</td></tr>
+      <tr><th scope="row">29 February 2024</th><td>Thursday</td><td>60</td><td>9</td></tr>
+      <tr><th scope="row">31 December 2024</th><td>Tuesday</td><td>366</td><td>1 (of 2025)</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section aria-labelledby="d-cal">
+  <h2 id="d-cal">Old dates and the calendar change</h2>
+  <p>The calculator applies Gregorian rules to every date, including those before a country adopted the Gregorian calendar. Most of Catholic Europe switched in 1582; Great Britain and its colonies, including those in North America, switched in September 1752, when 2 September was followed by 14 September. A birth recorded in the older Julian calendar (“Old Style”) therefore shows a different weekday here unless it is first converted to the Gregorian date.</p>
+</section>
+
+<section aria-labelledby="d-next">
+  <h2 id="d-next">Your birthday’s weekday in future years</h2>
+  <p>A common year is 52 weeks plus one day, so a birthday moves forward one weekday each year, and two when a 29 February falls in between. The table in the results lists the weekday of your next ten birthdays. For a countdown to the next one, see the <a href="/birthday-countdown-calculator/">Birthday Countdown Calculator</a>; for your full age and days lived, the <a href="/date-of-birth-calculator/">Date of Birth Calculator</a>.</p>
+</section>
+
+        <section class="adob-faq" aria-labelledby="adob-faq-h">
+      <h2 id="adob-faq-h">Frequently asked questions</h2>
+            <details open>
+        <summary><h3>What day of the week was I born?</h3></summary>
+        <p>Enter your date of birth and the weekday appears immediately. It is computed from a fixed day count, not looked up in a table, so it works for any Gregorian date.</p>
+      </details>
+            <details>
+        <summary><h3>What is the ISO week number?</h3></summary>
+        <p>ISO 8601 numbers weeks from Monday, and week 1 is the week containing 4 January. That is why 31 December can be in week 1 of the next year.</p>
+      </details>
+            <details>
+        <summary><h3>Does this work for very old dates?</h3></summary>
+        <p>The tool uses the Gregorian calendar for every date (the “proleptic” Gregorian calendar). Countries switched from the Julian calendar at different times — Britain and its colonies in 1752 — so historic records written in the Julian calendar can show a different weekday.</p>
+      </details>
+            <details>
+        <summary><h3>Why does my birthday move one weekday each year?</h3></summary>
+        <p>A common year is 52 weeks and 1 day, so a birthday moves forward one weekday; after a 29 February it moves two.</p>
+      </details>
+          </section>
+    
+    <section class="adob-sources" aria-labelledby="adob-src-h">
+      <h2 id="adob-src-h">Sources</h2>
+      <ol>
+                <li><a href="https://aa.usno.navy.mil/faq/calendars" rel="noopener" target="_blank">Gregorian calendar leap-year rule (U.S. Naval Observatory / Astronomical Applications)</a></li>
+                <li><a href="https://www.iso.org/iso-8601-date-and-time-format.html" rel="noopener" target="_blank">ISO 8601 — Date and time format (International Organization for Standardization)</a></li>
+                <li><a href="https://howardhinnant.github.io/date_algorithms.html" rel="noopener" target="_blank">Howard Hinnant — chrono-compatible low-level date algorithms (days_from_civil)</a></li>
+              </ol>
+      <p class="adob-muted">Last reviewed 26 September 2026. This is a date-arithmetic tool; it does not verify identity or decide eligibility for any legal, medical, insurance, education or employment purpose.</p>
+    </section>
+  </article>
+
+  <aside class="adob-related" aria-labelledby="adob-rel-h">
+    <h2 id="adob-rel-h">Related calculators</h2>
+    <ul>
+            <li><a href="/date-of-birth-calculator/"><strong>Date of Birth Calculator</strong><span>Age calculator by date of birth</span></a></li>
+            <li><a href="/birthday-countdown-calculator/"><strong>Birthday Countdown Calculator</strong><span>Next birthday calculator</span></a></li>
+            <li><a href="/age-milestone-calculator/"><strong>Age Milestone Calculator</strong><span>Milestone birthday calculator</span></a></li>
+            <li><a href="/date-calculator/"><strong>Date Calculator</strong><span>Days between any two dates.</span></a></li>
+          </ul>
+  </aside>
+</main>
+
+<footer class="adob-footer">
+  <p>&copy; 2026 EasyCalculatorSmart. Calculations run locally in your browser.</p>
+</footer>
+
+<script type="application/json" id="adob-config">{"defaultCountry":"us","defaultRule":"clamp","milestoneAges":[18,21,25,30,40,50,60,65,70,80,90,100],"dayMilestones":[1000,5000,10000,15000,20000,25000,30000],"weekdayStart":1,"countries":{"us":{"locale":"en-US","label":"United States","format":"MDY","monthFirst":true,"asOf":"Age as of","example":"09/24/2000"},"uk":{"locale":"en-GB","label":"United Kingdom","format":"DMY","monthFirst":false,"asOf":"Age on","example":"24/09/2000"},"ca":{"locale":"en-CA","label":"Canada","format":"YMD","monthFirst":true,"asOf":"Age as of","example":"2000-09-24"},"in":{"locale":"en-IN","label":"India","format":"DMY","monthFirst":false,"asOf":"Age as on","example":"24/09/2000"},"au":{"locale":"en-AU","label":"Australia","format":"DMY","monthFirst":false,"asOf":"Age as at","example":"24/09/2000"},"nz":{"locale":"en-NZ","label":"New Zealand","format":"DMY","monthFirst":false,"asOf":"Age as at","example":"24/09/2000"},"intl":{"locale":"en-US","label":"Other / ISO","format":"YMD","monthFirst":false,"asOf":"Age as of","example":"2000-09-24"}},"formats":{"MDY":{"label":"MM/DD/YYYY","placeholder":"MM/DD/YYYY"},"DMY":{"label":"DD/MM/YYYY","placeholder":"DD/MM/YYYY"},"YMD":{"label":"YYYY-MM-DD","placeholder":"YYYY-MM-DD"}},"presets":[{"id":"today","label":"Today","target":"today"},{"id":"yesterday","label":"Yesterday","target":"yesterday"},{"id":"tomorrow","label":"Tomorrow","target":"tomorrow"},{"id":"bday-year","label":"Birthday this year","target":"birthday-this-year"},{"id":"next-bday","label":"Next birthday","target":"next-birthday"},{"id":"ex-1990","label":"Example 1990","dob":"1990-01-15","target":"today"},{"id":"ex-2000","label":"Example 2000","dob":"2000-09-24","target":"today"},{"id":"leap","label":"Leap day","dob":"2004-02-29","target":"today"},{"id":"newborn","label":"Newborn","dob":"today-10d","target":"today"},{"id":"past","label":"Past date","target":"2020-01-01"},{"id":"future","label":"Future date","target":"today+5y"}],"labels":{"exactAge":"Exact age","years":"years","year":"year","months":"months","month":"month","days":"days","day":"day","weeks":"weeks","week":"week","hours":"hours","minutes":"minutes","seconds":"seconds","totalMonths":"Total months","totalWeeks":"Total weeks","totalDays":"Total days","totalHours":"Total hours","totalMinutes":"Total minutes","totalSeconds":"Total seconds","bornOn":"Born on","nextBirthday":"Next birthday","turning":"Turning","daysUntil":"Days until birthday","nextMilestone":"Next milestone","errInvalid":"Enter a real calendar date in the selected format (four-digit year).","errBefore":"The “as of” date is before the date of birth. Choose a later date.","errTime":"Enter times as HH:MM or HH:MM:SS (24-hour).","dateOnlyNote":"No birth time entered: hours, minutes and seconds count whole days from midnight to midnight.","timeNote":"Birth time included: totals are the real elapsed time between the two moments, including daylight-saving changes in the chosen time zones.","copied":"Result copied to clipboard."},"timeZones":["UTC","America/New_York","America/Chicago","America/Denver","America/Los_Angeles","America/Anchorage","Pacific/Honolulu","America/Toronto","America/Vancouver","America/Halifax","America/St_Johns","Europe/London","Europe/Dublin","Europe/Paris","Asia/Kolkata","Asia/Dubai","Asia/Singapore","Asia/Tokyo","Australia/Sydney","Australia/Perth","Pacific/Auckland"],"storageKey":"ecs-agedob-v1"}</script>
+<script src="/assets/js/lib/age-dob.js?v=2026.09.26" defer></script>
+<script src="/assets/js/age-dob-ui.js?v=2026.09.26" defer></script>
+</body>
+</html>
