@@ -5,6 +5,7 @@
  */
 require __DIR__ . '/../app/lib/AgeDobPage.php';
 require __DIR__ . '/../app/lib/AnganwadiPage.php';
+require __DIR__ . '/../app/lib/GarageSalePage.php';
 $root = dirname(__DIR__);
 $out = $root . '/public';
 $cfg = require $root . '/app/config/age-dob.php';
@@ -13,13 +14,15 @@ foreach (array_keys($cfg['pages']) as $slug) {
     file_put_contents("$out/$slug/index.html", (new AgeDobPage($slug, $cfg))->render());
     echo "public/$slug/index.html\n";
 }
-$awc = new AnganwadiPage();
-$awcSlug = (require $root . '/app/config/anganwadi.php')['page']['slug'];
-@mkdir("$out/$awcSlug", 0755, true);
-file_put_contents("$out/$awcSlug/index.html", $awc->render());
-echo "public/$awcSlug/index.html\n";
+foreach (['anganwadi' => AnganwadiPage::class, 'garage-sale' => GarageSalePage::class] as $conf => $class) {
+    $slug = (require "$root/app/config/$conf.php")['page']['slug'];
+    @mkdir("$out/$slug", 0755, true);
+    file_put_contents("$out/$slug/index.html", (new $class())->render());
+    echo "public/$slug/index.html\n";
+}
 foreach (['assets/css/age-dob.css', 'assets/js/lib/age-dob.js', 'assets/js/age-dob-ui.js',
-          'assets/css/anganwadi.css', 'assets/js/lib/anganwadi.js', 'assets/js/anganwadi-ui.js'] as $f) {
+          'assets/css/anganwadi.css', 'assets/js/lib/anganwadi.js', 'assets/js/anganwadi-ui.js',
+          'assets/css/garage-sale.css', 'assets/js/lib/garage-sale.js', 'assets/js/garage-sale-ui.js'] as $f) {
     @mkdir(dirname("$out/$f"), 0755, true);
     copy("$root/$f", "$out/$f");
     echo "public/$f\n";
