@@ -1,0 +1,142 @@
+/* EasyCalculatorSmart — Anganwadi salary calculator. All selectors scoped to awc-*. */
+:root {
+  --awc-bg: #f6f7fb; --awc-surface: #ffffff; --awc-surface-2: #f0f2f8; --awc-text: #172033; --awc-muted: #5a6478;
+  --awc-line: #dde2ec; --awc-accent: #c2410c; --awc-accent-2: #0f766e; --awc-accent-soft: #fff1e8;
+  --awc-good: #0f7b5f; --awc-bad: #b42318; --awc-info: #1d4ed8; --awc-focus: #2563eb; --awc-radius: 14px;
+  --awc-on-accent: #ffffff;
+  --awc-shadow: 0 1px 2px rgba(16,24,40,.05), 0 8px 24px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --awc-bg: #0e121b; --awc-surface: #161b27; --awc-surface-2: #1d2433; --awc-text: #e8ecf4; --awc-muted: #a3adc2;
+    --awc-line: #2b3446; --awc-accent: #fb923c; --awc-accent-2: #2dd4bf; --awc-accent-soft: #2d2118;
+    --awc-good: #4ade80; --awc-bad: #fca5a5; --awc-info: #93c5fd; --awc-focus: #93c5fd; --awc-on-accent: #0e121b;
+    --awc-shadow: 0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"] {
+  --awc-bg: #0e121b; --awc-surface: #161b27; --awc-surface-2: #1d2433; --awc-text: #e8ecf4; --awc-muted: #a3adc2;
+  --awc-line: #2b3446; --awc-accent: #fb923c; --awc-accent-2: #2dd4bf; --awc-accent-soft: #2d2118;
+  --awc-good: #4ade80; --awc-bad: #fca5a5; --awc-info: #93c5fd; --awc-focus: #93c5fd; --awc-on-accent: #0e121b;
+  --awc-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+
+.awc-body { margin: 0; background: var(--awc-bg); color: var(--awc-text);
+  font: 16px/1.7 system-ui, -apple-system, "Segoe UI", "Nirmala UI", "Noto Sans Devanagari", "Noto Sans", Roboto, sans-serif; -webkit-text-size-adjust: 100%; }
+.awc-body *, .awc-body *::before, .awc-body *::after { box-sizing: border-box; }
+.awc-body a { color: var(--awc-accent); }
+.awc-body :focus-visible { outline: 3px solid var(--awc-focus); outline-offset: 2px; border-radius: 6px; }
+.awc-sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.awc-skip { position: absolute; left: -999px; top: 8px; background: var(--awc-surface); padding: 8px 12px; z-index: 10; }
+.awc-skip:focus { left: 8px; }
+
+.awc-topbar { display: flex; justify-content: space-between; align-items: center; max-width: 1080px; margin: 0 auto; padding: 14px 16px; }
+.awc-brand { font-weight: 700; text-decoration: none; color: var(--awc-text) !important; }
+.awc-theme { background: var(--awc-surface); border: 1px solid var(--awc-line); border-radius: 999px; width: 40px; height: 40px; display: grid; place-items: center; cursor: pointer; color: var(--awc-text); }
+.awc-theme svg { width: 20px; height: 20px; fill: currentColor; }
+
+.awc { max-width: 1080px; margin: 0 auto; padding: 0 16px 48px; }
+.awc-crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 4px 0 16px; font-size: .875rem; color: var(--awc-muted); }
+.awc-crumbs li + li::before { content: "›"; margin-right: 6px; }
+
+.awc-hero { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start; margin-bottom: 20px; }
+.awc-hero-icon { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--awc-accent), var(--awc-accent-2)); box-shadow: var(--awc-shadow); }
+.awc-hero-icon svg { width: 34px; height: 34px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.awc-kicker { margin: 0; color: var(--awc-accent); font-weight: 600; font-size: .9rem; }
+.awc h1 { margin: 2px 0 8px; font-size: clamp(1.6rem, 4vw, 2.35rem); line-height: 1.25; }
+.awc-lead { margin: 0 0 12px; color: var(--awc-muted); max-width: 70ch; }
+.awc-badges { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.awc-badges li { font-size: .8rem; padding: 3px 10px; border-radius: 999px; background: var(--awc-accent-soft); color: var(--awc-text); }
+
+.awc-calc { background: var(--awc-surface); border: 1px solid var(--awc-line); border-radius: calc(var(--awc-radius) + 4px); box-shadow: var(--awc-shadow); padding: 20px; }
+.awc-row { display: grid; gap: 14px; margin-bottom: 14px; }
+.awc-row--main { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.awc-row--opts { grid-template-columns: 1fr; gap: 4px; }
+.awc-row--arrear { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 12px; }
+.awc-field { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.awc-row--opts .awc-field { max-width: 420px; margin: 4px 0 8px; }
+.awc-field label { font-weight: 600; font-size: .9rem; }
+.awc-field small, .awc-muted { color: var(--awc-muted); font-size: .8rem; }
+.awc-calc input[type="text"], .awc-calc select {
+  width: 100%; min-height: 46px; padding: 10px 12px; font: inherit; color: var(--awc-text); background: var(--awc-surface-2);
+  border: 1px solid var(--awc-line); border-radius: 10px; }
+.awc-calc input[aria-invalid="true"] { border-color: var(--awc-bad); }
+.awc-money { position: relative; }
+.awc-money span { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--awc-muted); font-weight: 600; pointer-events: none; }
+.awc-calc .awc-money input { padding-left: 30px; font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+
+.awc-adv { border: 1px dashed var(--awc-line); border-radius: 12px; padding: 10px 14px; margin-bottom: 14px; }
+.awc-adv summary { cursor: pointer; font-weight: 600; }
+.awc-adv summary small { font-weight: 400; color: var(--awc-muted); }
+.awc-check { display: inline-flex; gap: 8px; align-items: flex-start; font-size: .9rem; margin: 6px 0; cursor: pointer; }
+.awc-check input { width: 18px; height: 18px; margin-top: 4px; flex: none; accent-color: var(--awc-accent); }
+.awc-check[hidden], .awc-field[hidden] { display: none; }
+.awc-actions-row { display: flex; justify-content: flex-end; }
+.awc-btn { display: inline-flex; align-items: center; justify-content: center; font: inherit; font-weight: 600; min-height: 42px; padding: 8px 16px; border-radius: 10px;
+  border: 1px solid var(--awc-accent); background: var(--awc-accent); color: var(--awc-on-accent) !important; cursor: pointer; text-decoration: none; }
+.awc-btn--ghost { background: transparent; color: var(--awc-accent) !important; }
+.awc-btn--wa { background: #128c4a; border-color: #128c4a; color: #fff !important; }
+
+.awc-error { margin-top: 12px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--awc-bad); color: var(--awc-bad); background: color-mix(in srgb, var(--awc-bad) 8%, transparent); }
+.awc-error.is-info { border-color: var(--awc-info); color: var(--awc-info); background: color-mix(in srgb, var(--awc-info) 8%, transparent); }
+.awc-results { margin-top: 18px; animation: awc-in .25s ease-out; }
+@keyframes awc-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.awc-hero-result { border-radius: var(--awc-radius); padding: 18px; color: #fff; background: linear-gradient(135deg, #c2410c, #0f766e); }
+.awc-label { margin: 0; font-size: .9rem; opacity: .95; }
+.awc-big { margin: 4px 0; font-size: clamp(1.8rem, 6vw, 2.6rem); font-weight: 800; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.awc-sub { margin: 0; font-size: .92rem; opacity: .95; overflow-wrap: anywhere; }
+.awc-note { margin: 10px 0 0; font-size: .85rem; color: var(--awc-muted); overflow-wrap: anywhere; }
+.awc-h3 { font-size: 1.05rem; margin: 0 0 6px; }
+.awc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
+.awc-card { background: var(--awc-surface-2); border: 1px solid var(--awc-line); border-radius: 12px; padding: 12px; min-width: 0; }
+.awc-card-l { display: block; font-size: .82rem; color: var(--awc-muted); }
+.awc-card-n { display: block; font-size: 1.3rem; font-weight: 700; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.awc-card small { color: var(--awc-muted); font-size: .78rem; }
+.awc-box { margin-top: 12px; padding: 14px 16px; border-radius: 12px; background: var(--awc-surface-2); border: 1px solid var(--awc-line); }
+.awc-box p { margin: 0; }
+.awc-box--arrear { border-color: var(--awc-accent-2); }
+.awc-arrear-n { font-size: 1.6rem; font-weight: 800; color: var(--awc-accent-2); font-variant-numeric: tabular-nums; }
+
+.awc-work { margin-top: 16px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--awc-line); }
+.awc-work summary { cursor: pointer; font-weight: 600; }
+.awc-work ol { margin: 10px 0 0; padding-left: 20px; }
+.awc-share { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+
+.awc-article { margin-top: 36px; max-width: 78ch; }
+.awc-article h2 { font-size: 1.4rem; margin: 36px 0 10px; line-height: 1.3; }
+.awc-article h3 { font-size: 1.1rem; margin: 22px 0 6px; }
+.awc-article table { border-collapse: collapse; width: 100%; font-size: .9rem; margin: 10px 0; }
+.awc-article th, .awc-article td { border: 1px solid var(--awc-line); padding: 6px 10px; text-align: left; white-space: nowrap; }
+.awc-article thead th { background: var(--awc-surface-2); }
+.awc-scroll { overflow-x: auto; }
+.awc-callout { background: var(--awc-accent-soft); border-radius: 12px; padding: 12px 16px; }
+.awc-formula { font-weight: 700; padding: 10px 14px; border-left: 4px solid var(--awc-accent); background: var(--awc-surface); border-radius: 0 10px 10px 0; }
+.awc-faq details { border-bottom: 1px solid var(--awc-line); padding: 6px 0; }
+.awc-faq summary { cursor: pointer; list-style-position: outside; }
+.awc-faq summary h3 { display: inline; font-size: 1rem; margin: 0; }
+.awc-faq p { margin: 6px 0 10px; }
+.awc-sources ol { padding-left: 20px; font-size: .9rem; overflow-wrap: anywhere; }
+.awc-related { margin-top: 36px; }
+.awc-related h2 { font-size: 1.3rem; }
+.awc-related ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
+.awc-related a { display: block; height: 100%; padding: 12px 14px; border-radius: 12px; background: var(--awc-surface); border: 1px solid var(--awc-line); text-decoration: none; color: var(--awc-text); }
+.awc-related a:hover { border-color: var(--awc-accent); }
+.awc-related span { display: block; color: var(--awc-muted); font-size: .85rem; }
+.awc-footer { text-align: center; color: var(--awc-muted); font-size: .85rem; padding: 24px 16px; }
+
+@media (max-width: 760px) {
+  .awc-row--main, .awc-row--arrear { grid-template-columns: 1fr; }
+  .awc-grid { grid-template-columns: 1fr; }
+  .awc-hero { grid-template-columns: 1fr; }
+  .awc-hero-icon { width: 52px; height: 52px; }
+  .awc-calc { padding: 14px; }
+  .awc-share .awc-btn { flex: 1 1 auto; }
+}
+@media (prefers-reduced-motion: reduce) { .awc-results { animation: none; } }
+@media print {
+  .awc-topbar, .awc-form, .awc-share, .awc-related, .awc-article, .awc-crumbs, .awc-badges, .awc-footer, .awc-skip, .awc-hero-icon { display: none !important; }
+  .awc-body { background: #fff; color: #000; }
+  .awc-calc { box-shadow: none; border: 0; padding: 0; }
+  .awc-hero-result { background: none; color: #000 !important; border: 2px solid #000; }
+}

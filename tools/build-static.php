@@ -1,9 +1,10 @@
 <?php
 /**
- * Builds plain-HTML copies of the Age / DOB pages into public/ for hosts without PHP.
+ * Builds plain-HTML copies of the calculator pages into public/ for hosts without PHP.
  * Usage: php tools/build-static.php   → public/<slug>/index.html + public/assets/...
  */
 require __DIR__ . '/../app/lib/AgeDobPage.php';
+require __DIR__ . '/../app/lib/AnganwadiPage.php';
 $root = dirname(__DIR__);
 $out = $root . '/public';
 $cfg = require $root . '/app/config/age-dob.php';
@@ -12,7 +13,13 @@ foreach (array_keys($cfg['pages']) as $slug) {
     file_put_contents("$out/$slug/index.html", (new AgeDobPage($slug, $cfg))->render());
     echo "public/$slug/index.html\n";
 }
-foreach (['assets/css/age-dob.css', 'assets/js/lib/age-dob.js', 'assets/js/age-dob-ui.js'] as $f) {
+$awc = new AnganwadiPage();
+$awcSlug = (require $root . '/app/config/anganwadi.php')['page']['slug'];
+@mkdir("$out/$awcSlug", 0755, true);
+file_put_contents("$out/$awcSlug/index.html", $awc->render());
+echo "public/$awcSlug/index.html\n";
+foreach (['assets/css/age-dob.css', 'assets/js/lib/age-dob.js', 'assets/js/age-dob-ui.js',
+          'assets/css/anganwadi.css', 'assets/js/lib/anganwadi.js', 'assets/js/anganwadi-ui.js'] as $f) {
     @mkdir(dirname("$out/$f"), 0755, true);
     copy("$root/$f", "$out/$f");
     echo "public/$f\n";
