@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分数計算機（途中式つき）— 足し算・引き算・掛け算・割り算・約分・通分</title>
+<meta name="description" content="無料の分数計算機。分数・帯分数の足し算、引き算、掛け算、割り算を途中式つきで計算。約分、通分、帯分数と仮分数の変換、分数と小数・パーセントの変換、分数の大小比較にも対応。">
+<link rel="canonical" href="https://easycalculatorsmart.com/ja/fraction-calculator/">
+<link rel="alternate" hreflang="en" href="https://easycalculatorsmart.com/fraction-calculator/">
+<link rel="alternate" hreflang="hi" href="https://easycalculatorsmart.com/hi/fraction-calculator/">
+<link rel="alternate" hreflang="ur" href="https://easycalculatorsmart.com/ur/fraction-calculator/">
+<link rel="alternate" hreflang="ja" href="https://easycalculatorsmart.com/ja/fraction-calculator/">
+<link rel="alternate" hreflang="ru" href="https://easycalculatorsmart.com/ru/fraction-calculator/">
+<link rel="alternate" hreflang="x-default" href="https://easycalculatorsmart.com/fraction-calculator/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="分数計算機（途中式つき）— 足し算・引き算・掛け算・割り算・約分・通分">
+<meta property="og:description" content="無料の分数計算機。分数・帯分数の足し算、引き算、掛け算、割り算を途中式つきで計算。約分、通分、帯分数と仮分数の変換、分数と小数・パーセントの変換、分数の大小比較にも対応。">
+<meta property="og:url" content="https://easycalculatorsmart.com/ja/fraction-calculator/">
+<meta property="og:site_name" content="EasyCalculatorSmart">
+<meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem('ecs-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="stylesheet" href="/assets/css/fraction.css?v=2026.10.01">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://easycalculatorsmart.com/ja/fraction-calculator/#webpage","url":"https://easycalculatorsmart.com/ja/fraction-calculator/","name":"分数計算機（途中式つき）— 足し算・引き算・掛け算・割り算・約分・通分","description":"無料の分数計算機。分数・帯分数の足し算、引き算、掛け算、割り算を途中式つきで計算。約分、通分、帯分数と仮分数の変換、分数と小数・パーセントの変換、分数の大小比較にも対応。","dateModified":"2026-10-01","inLanguage":"ja","isPartOf":{"@type":"WebSite","name":"EasyCalculatorSmart","url":"https://easycalculatorsmart.com/"}},{"@type":"WebApplication","name":"分数計算機","url":"https://easycalculatorsmart.com/ja/fraction-calculator/","applicationCategory":"EducationalApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"無料の分数計算機。分数・帯分数の足し算、引き算、掛け算、割り算を途中式つきで計算。約分、通分、帯分数と仮分数の変換、分数と小数・パーセントの変換、分数の大小比較にも対応。","inLanguage":"ja"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://easycalculatorsmart.com/"},{"@type":"ListItem","position":2,"name":"分数計算機","item":"https://easycalculatorsmart.com/ja/fraction-calculator/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"分数計算機とは何ですか？","acceptedAnswer":{"@type":"Answer","text":"分数の足し算・引き算・掛け算・割り算を行い、答えを約分した形で出すツールです。この計算機は途中式も表示し、帯分数や負の分数にも対応、答えを小数やパーセントでも表示します。"}},{"@type":"Question","name":"分数の足し算はどうやりますか？","acceptedAnswer":{"@type":"Answer","text":"分母の最小公倍数で通分してから分子を足し、最後に約分します。1/2 + 1/3 なら公分母は6なので、3/6 + 2/6 = 5/6 です。"}},{"@type":"Question","name":"分数の引き算はどうやりますか？","acceptedAnswer":{"@type":"Answer","text":"足し算と同じく通分してから分子を引きます。3/4 − 1/6 は公分母12で、9/12 − 2/12 = 7/12 です。"}},{"@type":"Question","name":"分数の掛け算はどうやりますか？","acceptedAnswer":{"@type":"Answer","text":"分子どうし、分母どうしを掛けてから約分します。2/3 × 3/4 = 6/12 = 1/2。通分は必要ありません。"}},{"@type":"Question","name":"分数の割り算はどうやりますか？","acceptedAnswer":{"@type":"Answer","text":"割る数の分数を逆数（分子と分母を入れかえたもの）にして掛けます。2/3 ÷ 4/5 = 2/3 × 5/4 = 10/12 = 5/6。0で割ることはできません。"}},{"@type":"Question","name":"分数の約分はどうやりますか？","acceptedAnswer":{"@type":"Answer","text":"分子と分母を最大公約数で割ります。24/36 の最大公約数は12なので、24/36 = 2/3 です。"}},{"@type":"Question","name":"分数を小数に直すには？","acceptedAnswer":{"@type":"Answer","text":"分子を分母で割ります。3/8 = 0.375。既約分数の分母に2と5以外の素因数があると、1/3 = 0.333… のような循環小数になります。"}},{"@type":"Question","name":"小数を分数に直すには？","acceptedAnswer":{"@type":"Answer","text":"小数点以下の桁数に合わせて10、100、1000…を分母にし、約分します。0.75 = 75/100 = 3/4。"}},{"@type":"Question","name":"分数をパーセントにするには？","acceptedAnswer":{"@type":"Answer","text":"分数に100を掛けます。3/4 × 100 = 75%、1/8 × 100 = 12.5%。"}},{"@type":"Question","name":"2つの分数の大小はどう比べますか？","acceptedAnswer":{"@type":"Answer","text":"たすき掛けで比べます。2/3 と 3/5 なら 2 × 5 = 10、3 × 3 = 9 で、10のほうが大きいので 2/3 \u003E 3/5 です。"}},{"@type":"Question","name":"仮分数を帯分数に直すには？","acceptedAnswer":{"@type":"Answer","text":"分子を分母で割り、商を整数部分、あまりを分子にします。7/3 = 2 あまり 1 なので、2と1/3 です。"}},{"@type":"Question","name":"通分の公分母はどう求めますか？","acceptedAnswer":{"@type":"Answer","text":"分母どうしの最小公倍数が最小の公分母です。4と6の最小公倍数は12なので、3/4 と 1/6 は12で通分します。"}}]}]}</script>
+</head>
+<body class="fr-body">
+<a class="fr-skip" href="#fr-calc">計算機へ移動</a>
+<header class="fr-topbar">
+  <a class="fr-brand" href="/">EasyCalculatorSmart</a>
+  <div class="fr-top-right">
+    <nav class="fr-langs" aria-label="言語">
+      <ul>
+                <li><a href="/fraction-calculator/" hreflang="en" lang="en">English</a></li>
+                <li><a href="/hi/fraction-calculator/" hreflang="hi" lang="hi">हिन्दी</a></li>
+                <li><a href="/ur/fraction-calculator/" hreflang="ur" lang="ur">اردو</a></li>
+                <li><a href="/ja/fraction-calculator/" hreflang="ja" lang="ja" aria-current="page">日本語</a></li>
+                <li><a href="/ru/fraction-calculator/" hreflang="ru" lang="ru">Русский</a></li>
+              </ul>
+    </nav>
+    <button type="button" class="fr-theme" data-fr-theme aria-label="ダーク／ライト表示を切り替え">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="fr">
+  <nav class="fr-crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">ホーム</a></li>
+      <li aria-current="page">分数計算機</li>
+    </ol>
+  </nav>
+
+  <section class="fr-hero">
+    <div class="fr-hero-icon" aria-hidden="true"><span>a</span><i></i><span>b</span></div>
+    <div>
+      <p class="fr-kicker">途中式つき分数電卓</p>
+      <h1>分数計算機</h1>
+      <p class="fr-lead">分数・帯分数・整数の四則計算（足し算・引き算・掛け算・割り算）を、約分済みの正確な答えと途中式で表示します。約分、帯分数と仮分数の変換、小数・パーセントへの変換、大小比較、「ある数の何分のいくつ」も計算できます。</p>
+      <ul class="fr-badges">
+        <li>正確な答え</li><li>途中式つき</li><li>帯分数対応</li><li>無料・登録不要</li>      </ul>
+    </div>
+  </section>
+
+  <section class="fr-calc" id="fr-calc" aria-labelledby="fr-calc-h">
+  <h2 id="fr-calc-h" class="fr-sr">計算機</h2>
+
+  <div class="fr-tabs" role="tablist" aria-label="計算の種類">
+        <button type="button" role="tab" id="fr-tab-calc" aria-controls="fr-panel-calc" aria-selected="true" tabindex="0" data-fr-tab="calc">分数の計算</button>
+        <button type="button" role="tab" id="fr-tab-multi" aria-controls="fr-panel-multi" aria-selected="false" tabindex="-1" data-fr-tab="multi">3つ以上の分数</button>
+        <button type="button" role="tab" id="fr-tab-simplify" aria-controls="fr-panel-simplify" aria-selected="false" tabindex="-1" data-fr-tab="simplify">約分</button>
+        <button type="button" role="tab" id="fr-tab-mixed" aria-controls="fr-panel-mixed" aria-selected="false" tabindex="-1" data-fr-tab="mixed">帯分数・仮分数</button>
+        <button type="button" role="tab" id="fr-tab-decimal" aria-controls="fr-panel-decimal" aria-selected="false" tabindex="-1" data-fr-tab="decimal">小数</button>
+        <button type="button" role="tab" id="fr-tab-percent" aria-controls="fr-panel-percent" aria-selected="false" tabindex="-1" data-fr-tab="percent">パーセント</button>
+        <button type="button" role="tab" id="fr-tab-compare" aria-controls="fr-panel-compare" aria-selected="false" tabindex="-1" data-fr-tab="compare">大小比較</button>
+        <button type="button" role="tab" id="fr-tab-order" aria-controls="fr-panel-order" aria-selected="false" tabindex="-1" data-fr-tab="order">並べ替え</button>
+        <button type="button" role="tab" id="fr-tab-of" aria-controls="fr-panel-of" aria-selected="false" tabindex="-1" data-fr-tab="of">ある数の分数</button>
+        <button type="button" role="tab" id="fr-tab-what" aria-controls="fr-panel-what" aria-selected="false" tabindex="-1" data-fr-tab="what">XはYの何分のいくつ？</button>
+        <button type="button" role="tab" id="fr-tab-equiv" aria-controls="fr-panel-equiv" aria-selected="false" tabindex="-1" data-fr-tab="equiv">等しい分数</button>
+      </div>
+
+  <div class="fr-grid">
+    <div class="fr-panels">
+
+      <form class="fr-panel" id="fr-panel-calc" role="tabpanel" aria-labelledby="fr-tab-calc" data-fr-panel="calc" novalidate>
+        <div class="fr-eq">
+              <fieldset class="fr-in" data-fr-frac="calc-a">
+      <legend>1つ目の分数</legend>
+      <div class="fr-in-row" dir="ltr">
+                <label class="fr-in-whole"><span class="fr-sr">1つ目の分数 — 整数部分</span>
+          <input type="text" inputmode="numeric" autocomplete="off" data-part="w" placeholder="整数" value=""></label>
+                <span class="fr-in-stack">
+          <label><span class="fr-sr">1つ目の分数 — 分子</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="n" placeholder="分子" value="1"></label>
+          <span class="fr-in-bar" aria-hidden="true"></span>
+          <label><span class="fr-sr">1つ目の分数 — 分母</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="d" placeholder="分母" value="2"></label>
+        </span>
+      </div>
+    </fieldset>
+                  <div class="fr-ops" role="radiogroup" aria-label="計算の記号">
+            <label class="fr-op"><input type="radio" name="fr-calc-op" value="+" checked><span aria-hidden="true">+</span><span class="fr-sr">足し算</span></label>
+            <label class="fr-op"><input type="radio" name="fr-calc-op" value="-"><span aria-hidden="true">−</span><span class="fr-sr">引き算</span></label>
+            <label class="fr-op"><input type="radio" name="fr-calc-op" value="*"><span aria-hidden="true">×</span><span class="fr-sr">掛け算</span></label>
+            <label class="fr-op"><input type="radio" name="fr-calc-op" value="/"><span aria-hidden="true">÷</span><span class="fr-sr">割り算</span></label>
+          </div>
+                  <fieldset class="fr-in" data-fr-frac="calc-b">
+      <legend>2つ目の分数</legend>
+      <div class="fr-in-row" dir="ltr">
+                <label class="fr-in-whole"><span class="fr-sr">2つ目の分数 — 整数部分</span>
+          <input type="text" inputmode="numeric" autocomplete="off" data-part="w" placeholder="整数" value=""></label>
+                <span class="fr-in-stack">
+          <label><span class="fr-sr">2つ目の分数 — 分子</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="n" placeholder="分子" value="1"></label>
+          <span class="fr-in-bar" aria-hidden="true"></span>
+          <label><span class="fr-sr">2つ目の分数 — 分母</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="d" placeholder="分母" value="3"></label>
+        </span>
+      </div>
+    </fieldset>
+            </div>
+        <div class="fr-actions"><button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button></div>
+      </form>
+
+      <form class="fr-panel" id="fr-panel-multi" role="tabpanel" aria-labelledby="fr-tab-multi" data-fr-panel="multi" hidden novalidate>
+        <p class="fr-hint">分数は10個まで入力できます。掛け算・割り算を先に、足し算・引き算をあとで計算します。</p>
+        <ol class="fr-rows" data-fr-rows="multi"></ol>
+        <div class="fr-actions">
+          <button type="button" class="fr-btn fr-btn--ghost" data-fr-add="multi">+ 分数を追加</button>
+          <button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button>
+        </div>
+      </form>
+
+      <form class="fr-panel" id="fr-panel-simplify" role="tabpanel" aria-labelledby="fr-tab-simplify" data-fr-panel="simplify" hidden novalidate>
+            <fieldset class="fr-in" data-fr-frac="simplify-a">
+      <legend>約分</legend>
+      <div class="fr-in-row" dir="ltr">
+                <span class="fr-in-stack">
+          <label><span class="fr-sr">約分 — 分子</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="n" placeholder="分子" value="24"></label>
+          <span class="fr-in-bar" aria-hidden="true"></span>
+          <label><span class="fr-sr">約分 — 分母</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="d" placeholder="分母" value="36"></label>
+        </span>
+      </div>
+    </fieldset>
+            <div class="fr-actions"><button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button></div>
+      </form>
+
+      <form class="fr-panel" id="fr-panel-mixed" role="tabpanel" aria-labelledby="fr-tab-mixed" data-fr-panel="mixed" hidden novalidate>
+            <div class="fr-dir" role="radiogroup">
+            <label class="fr-pill"><input type="radio" name="fr-mixed-dir" value="toImproper" checked><span>帯分数 → 仮分数</span></label>
+            <label class="fr-pill"><input type="radio" name="fr-mixed-dir" value="toMixed"><span>仮分数 → 帯分数</span></label>
+          </div>
+                <fieldset class="fr-in" data-fr-frac="mixed-a">
+      <legend>分数</legend>
+      <div class="fr-in-row" dir="ltr">
+                <label class="fr-in-whole"><span class="fr-sr">分数 — 整数部分</span>
+          <input type="text" inputmode="numeric" autocomplete="off" data-part="w" placeholder="整数" value="2"></label>
+                <span class="fr-in-stack">
+          <label><span class="fr-sr">分数 — 分子</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="n" placeholder="分子" value="1"></label>
+          <span class="fr-in-bar" aria-hidden="true"></span>
+          <label><span class="fr-sr">分数 — 分母</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="d" placeholder="分母" value="3"></label>
+        </span>
+      </div>
+    </fieldset>
+            <div class="fr-actions"><button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button></div>
+      </form>
+
+      <form class="fr-panel" id="fr-panel-decimal" role="tabpanel" aria-labelledby="fr-tab-decimal" data-fr-panel="decimal" hidden novalidate>
+            <div class="fr-dir" role="radiogroup">
+            <label class="fr-pill"><input type="radio" name="fr-decimal-dir" value="toDec" checked><span>分数 → 小数</span></label>
+            <label class="fr-pill"><input type="radio" name="fr-decimal-dir" value="toFrac"><span>小数 → 分数</span></label>
+          </div>
+            <div data-fr-show="toDec">    <fieldset class="fr-in" data-fr-frac="decimal-a">
+      <legend>分数</legend>
+      <div class="fr-in-row" dir="ltr">
+                <label class="fr-in-whole"><span class="fr-sr">分数 — 整数部分</span>
+          <input type="text" inputmode="numeric" autocomplete="off" data-part="w" placeholder="整数" value=""></label>
+                <span class="fr-in-stack">
+          <label><span class="fr-sr">分数 — 分子</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="n" placeholder="分子" value="3"></label>
+          <span class="fr-in-bar" aria-hidden="true"></span>
+          <label><span class="fr-sr">分数 — 分母</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="d" placeholder="分母" value="8"></label>
+        </span>
+      </div>
+    </fieldset>
+    </div>
+        <div class="fr-field" data-fr-show="toFrac" hidden>
+          <label for="fr-dec-in">小数</label>
+          <input id="fr-dec-in" type="text" inputmode="decimal" autocomplete="off" dir="ltr" data-fr-text="dec" value="0.75" aria-describedby="fr-dec-help">
+          <small id="fr-dec-help">0.125 のような有限小数は正確に分数になります。循環小数は循環する部分をかっこで：0.(3) = 1/3。</small>
+        </div>
+        <div class="fr-actions"><button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button></div>
+      </form>
+
+      <form class="fr-panel" id="fr-panel-percent" role="tabpanel" aria-labelledby="fr-tab-percent" data-fr-panel="percent" hidden novalidate>
+            <div class="fr-dir" role="radiogroup">
+            <label class="fr-pill"><input type="radio" name="fr-percent-dir" value="toPct" checked><span>分数 → パーセント</span></label>
+            <label class="fr-pill"><input type="radio" name="fr-percent-dir" value="toFrac"><span>パーセント → 分数</span></label>
+          </div>
+            <div data-fr-show="toPct">    <fieldset class="fr-in" data-fr-frac="percent-a">
+      <legend>分数</legend>
+      <div class="fr-in-row" dir="ltr">
+                <label class="fr-in-whole"><span class="fr-sr">分数 — 整数部分</span>
+          <input type="text" inputmode="numeric" autocomplete="off" data-part="w" placeholder="整数" value=""></label>
+                <span class="fr-in-stack">
+          <label><span class="fr-sr">分数 — 分子</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="n" placeholder="分子" value="3"></label>
+          <span class="fr-in-bar" aria-hidden="true"></span>
+          <label><span class="fr-sr">分数 — 分母</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="d" placeholder="分母" value="4"></label>
+        </span>
+      </div>
+    </fieldset>
+    </div>
+        <div class="fr-field" data-fr-show="toFrac" hidden>
+          <label for="fr-pct-in">パーセント（%）</label>
+          <input id="fr-pct-in" type="text" inputmode="decimal" autocomplete="off" dir="ltr" data-fr-text="pct" value="12.5">
+        </div>
+        <div class="fr-actions"><button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button></div>
+      </form>
+
+      <form class="fr-panel" id="fr-panel-compare" role="tabpanel" aria-labelledby="fr-tab-compare" data-fr-panel="compare" hidden novalidate>
+        <div class="fr-eq">
+              <fieldset class="fr-in" data-fr-frac="compare-a">
+      <legend>1つ目の分数</legend>
+      <div class="fr-in-row" dir="ltr">
+                <label class="fr-in-whole"><span class="fr-sr">1つ目の分数 — 整数部分</span>
+          <input type="text" inputmode="numeric" autocomplete="off" data-part="w" placeholder="整数" value=""></label>
+                <span class="fr-in-stack">
+          <label><span class="fr-sr">1つ目の分数 — 分子</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="n" placeholder="分子" value="2"></label>
+          <span class="fr-in-bar" aria-hidden="true"></span>
+          <label><span class="fr-sr">1つ目の分数 — 分母</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="d" placeholder="分母" value="3"></label>
+        </span>
+      </div>
+    </fieldset>
+              <span class="fr-vs" aria-hidden="true">?</span>
+              <fieldset class="fr-in" data-fr-frac="compare-b">
+      <legend>2つ目の分数</legend>
+      <div class="fr-in-row" dir="ltr">
+                <label class="fr-in-whole"><span class="fr-sr">2つ目の分数 — 整数部分</span>
+          <input type="text" inputmode="numeric" autocomplete="off" data-part="w" placeholder="整数" value=""></label>
+                <span class="fr-in-stack">
+          <label><span class="fr-sr">2つ目の分数 — 分子</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="n" placeholder="分子" value="3"></label>
+          <span class="fr-in-bar" aria-hidden="true"></span>
+          <label><span class="fr-sr">2つ目の分数 — 分母</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="d" placeholder="分母" value="5"></label>
+        </span>
+      </div>
+    </fieldset>
+            </div>
+        <div class="fr-actions"><button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button></div>
+      </form>
+
+      <form class="fr-panel" id="fr-panel-order" role="tabpanel" aria-labelledby="fr-tab-order" data-fr-panel="order" hidden novalidate>
+        <p class="fr-hint">分数・帯分数・整数を3〜10個入力してください。</p>
+        <ol class="fr-rows fr-rows--order" data-fr-rows="order"></ol>
+        <div class="fr-actions">
+          <button type="button" class="fr-btn fr-btn--ghost" data-fr-add="order">+ 分数を追加</button>
+          <button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button>
+        </div>
+      </form>
+
+      <form class="fr-panel" id="fr-panel-of" role="tabpanel" aria-labelledby="fr-tab-of" data-fr-panel="of" hidden novalidate>
+        <div class="fr-eq">
+              <fieldset class="fr-in" data-fr-frac="of-a">
+      <legend>分数</legend>
+      <div class="fr-in-row" dir="ltr">
+                <label class="fr-in-whole"><span class="fr-sr">分数 — 整数部分</span>
+          <input type="text" inputmode="numeric" autocomplete="off" data-part="w" placeholder="整数" value=""></label>
+                <span class="fr-in-stack">
+          <label><span class="fr-sr">分数 — 分子</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="n" placeholder="分子" value="3"></label>
+          <span class="fr-in-bar" aria-hidden="true"></span>
+          <label><span class="fr-sr">分数 — 分母</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="d" placeholder="分母" value="4"></label>
+        </span>
+      </div>
+    </fieldset>
+              <span class="fr-word">×</span>
+          <div class="fr-field fr-field--num">
+            <label for="fr-of-x">数</label>
+            <input id="fr-of-x" type="text" inputmode="decimal" autocomplete="off" dir="ltr" data-fr-text="ofx" value="80">
+          </div>
+        </div>
+        <div class="fr-actions"><button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button></div>
+      </form>
+
+      <form class="fr-panel" id="fr-panel-what" role="tabpanel" aria-labelledby="fr-tab-what" data-fr-panel="what" hidden novalidate>
+        <div class="fr-eq">
+          <div class="fr-field fr-field--num"><label for="fr-what-x">X（部分）</label>
+            <input id="fr-what-x" type="text" inputmode="decimal" autocomplete="off" dir="ltr" data-fr-text="wx" value="15"></div>
+          <span class="fr-word">は次の数の何分のいくつ？</span>
+          <div class="fr-field fr-field--num"><label for="fr-what-y">Y（全体）</label>
+            <input id="fr-what-y" type="text" inputmode="decimal" autocomplete="off" dir="ltr" data-fr-text="wy" value="60"></div>
+        </div>
+        <div class="fr-actions"><button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button></div>
+      </form>
+
+      <form class="fr-panel" id="fr-panel-equiv" role="tabpanel" aria-labelledby="fr-tab-equiv" data-fr-panel="equiv" hidden novalidate>
+        <div class="fr-eq">
+              <fieldset class="fr-in" data-fr-frac="equiv-a">
+      <legend>分数</legend>
+      <div class="fr-in-row" dir="ltr">
+                <span class="fr-in-stack">
+          <label><span class="fr-sr">分数 — 分子</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="n" placeholder="分子" value="1"></label>
+          <span class="fr-in-bar" aria-hidden="true"></span>
+          <label><span class="fr-sr">分数 — 分母</span>
+            <input type="text" inputmode="numeric" autocomplete="off" data-part="d" placeholder="分母" value="2"></label>
+        </span>
+      </div>
+    </fieldset>
+              <div class="fr-field fr-field--num"><label for="fr-eq-start">何倍から</label>
+            <input id="fr-eq-start" type="text" inputmode="numeric" autocomplete="off" dir="ltr" data-fr-text="eqs" value="1"></div>
+          <div class="fr-field fr-field--num"><label for="fr-eq-count">個数</label>
+            <select id="fr-eq-count" data-fr-text="eqc"><option>5</option><option selected>10</option><option>15</option><option>20</option></select></div>
+        </div>
+        <div class="fr-actions"><button type="submit" class="fr-btn fr-btn--go">計算する</button><button type="button" class="fr-btn fr-btn--ghost" data-fr-reset>リセット</button></div>
+      </form>
+
+      <div class="fr-settings">
+        <label for="fr-digits">小数の桁数</label>
+        <select id="fr-digits" data-fr-digits>
+          <option value="2">2</option><option value="4">4</option><option value="6" selected>6</option><option value="8">8</option><option value="10">10</option><option value="12">12</option>        </select>
+      </div>
+
+      <div class="fr-examples">
+        <h3 class="fr-h3">例を試す</h3>
+        <div class="fr-chips" data-fr-examples></div>
+      </div>
+    </div>
+
+    <div class="fr-out" aria-labelledby="fr-out-h">
+      <h3 id="fr-out-h" class="fr-h3">答え</h3>
+      <div class="fr-error" role="alert" data-fr-error hidden></div>
+      <div class="fr-sr" aria-live="polite" data-fr-announce></div>
+      <div class="fr-result" data-fr-result>
+        <p class="fr-expr" data-fr-expr dir="ltr"></p>
+        <div class="fr-main" data-fr-main></div>
+        <dl class="fr-forms" data-fr-forms></dl>
+        <div class="fr-extra" data-fr-extra></div>
+        <figure class="fr-visual" data-fr-visual hidden><div class="fr-bars" data-fr-bars aria-hidden="true"></div><figcaption data-fr-vcap></figcaption></figure>
+        <details class="fr-steps" open>
+          <summary>途中式</summary>
+          <ol data-fr-steps></ol>
+        </details>
+        <div class="fr-share">
+          <button type="button" class="fr-btn" data-fr-copy>答えをコピー</button>
+          <button type="button" class="fr-btn fr-btn--ghost" data-fr-copy-steps>途中式をコピー</button>
+          <button type="button" class="fr-btn fr-btn--ghost" data-fr-share>共有</button>
+          <button type="button" class="fr-btn fr-btn--ghost" data-fr-print>印刷</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <article class="fr-article">
+    <section aria-labelledby="a-intro">
+  <h2 id="a-intro">分数計算機でできること</h2>
+  <p>分数は、<strong>分母</strong>（下の数）が「1を何等分したか」、<strong>分子</strong>（上の数）が「そのうちいくつ分か」を表します。この計算機は真分数（3/4）、仮分数（7/4）、帯分数（2と1/3）、整数、負の分数に対応しています。</p>
+  <p>答えは常に正確です。計算はすべて整数で行い、四捨五入した小数は使わないため、1/3 は1/3のまま、大きな数でも誤差が出ません。小数は表示のためだけに使い、桁数は自分で選べます。</p>
+</section>
+
+<section aria-labelledby="a-use">
+  <h2 id="a-use">使い方</h2>
+  <ol>
+    <li>1つ目の分数を入力します。上の欄が分子、下の欄が分母です。帯分数のときは左の欄に整数部分も入力します。</li>
+    <li><strong>+</strong>・<strong>−</strong>・<strong>×</strong>・<strong>÷</strong> から選びます。</li>
+    <li>2つ目の分数を入力して<strong>計算する</strong>（または Enter）を押します。</li>
+    <li>既約分数・帯分数・小数・パーセントの答えと、途中式を確認します。</li>
+  </ol>
+  <p>上のタブから、3つ以上の分数の計算、約分、帯分数と仮分数の変換、小数・パーセント、大小比較、並べ替え、「ある数の何分のいくつ」、等しい分数のツールを使えます。</p>
+</section>
+
+<section aria-labelledby="a-add">
+  <h2 id="a-add">分数の足し算（通分）</h2>
+  <p>分母がちがう分数は、そのままでは足せません。まず<strong>通分</strong>して分母をそろえます。いちばん小さい公分母は、分母どうしの<strong>最小公倍数</strong>です。</p>
+  <div class="fr-callout"><p><strong>例：<span dir="ltr">1/2 + 1/3</span></strong></p><ol>
+    <li>2と3の最小公倍数 = 6</li><li><span dir="ltr">1/2 = 3/6</span>、<span dir="ltr">1/3 = 2/6</span></li><li><span dir="ltr">3/6 + 2/6 = 5/6</span></li><li>5/6 はこれ以上約分できません。</li></ol></div>
+</section>
+
+<section aria-labelledby="a-sub">
+  <h2 id="a-sub">分数の引き算</h2>
+  <p>引き算も通分してから分子を引きます。</p>
+  <div class="fr-callout"><p><strong>例：<span dir="ltr">3/4 − 1/6</span></strong></p><ol>
+    <li>4と6の最小公倍数 = 12</li><li><span dir="ltr">3/4 = 9/12</span>、<span dir="ltr">1/6 = 2/12</span></li><li><span dir="ltr">9/12 − 2/12 = 7/12</span></li></ol></div>
+  <p>引く数のほうが大きいと答えは負になります：<span dir="ltr">1/4 − 3/4 = −1/2</span>。</p>
+</section>
+
+<section aria-labelledby="a-mul">
+  <h2 id="a-mul">分数の掛け算</h2>
+  <p>掛け算では通分は不要です。分子どうし、分母どうしを掛けてから約分します。</p>
+  <div class="fr-callout"><p><strong>例：<span dir="ltr">2/3 × 3/4</span></strong></p><ol>
+    <li>分子：2 × 3 = 6</li><li>分母：3 × 4 = 12</li><li><span dir="ltr">6/12 = 1/2</span>（最大公約数 6）</li></ol></div>
+</section>
+
+<section aria-labelledby="a-div">
+  <h2 id="a-div">分数の割り算</h2>
+  <p>分数で割るときは、割る数を<strong>逆数</strong>（分子と分母を入れかえた数）にして掛けます。</p>
+  <div class="fr-callout"><p><strong>例：<span dir="ltr">2/3 ÷ 4/5</span></strong></p><ol>
+    <li>4/5 の逆数は 5/4</li><li><span dir="ltr">2/3 × 5/4 = 10/12</span></li><li><span dir="ltr">10/12 = 5/6</span>（最大公約数 2）</li></ol></div>
+  <p>0で割ることはできないので、割る数が0のときは計算機がエラーを表示します。0を分数で割った答えは0です。</p>
+</section>
+
+<section aria-labelledby="a-simp">
+  <h2 id="a-simp">約分のしかた</h2>
+  <p>分子と分母を<strong>最大公約数</strong>で割ると、それ以上約分できない<strong>既約分数</strong>になります。「約分」タブでは、ユークリッドの互除法で最大公約数を求める計算を1行ずつ表示します。</p>
+  <div class="fr-callout"><p><strong>例：24/36。</strong> 36 = 1 × 24 + 12、24 = 2 × 12 + 0 より最大公約数は12、<span dir="ltr">24/36 = 2/3</span>。</p></div>
+</section>
+
+<section aria-labelledby="a-mixed">
+  <h2 id="a-mixed">帯分数と仮分数</h2>
+  <p><strong>仮分数</strong>は分子が分母以上の分数（7/3）、<strong>帯分数</strong>は同じ大きさを「整数と真分数」で表したもの（2と1/3）です。この計算機では帯分数を「2 1/3」のように、整数と分数の間を空けて表示します。</p>
+  <ul>
+    <li>帯分数 → 仮分数：整数 × 分母 + 分子。2と1/3 → 2 × 3 + 1 = 7 → 7/3。</li>
+    <li>仮分数 → 帯分数：分子 ÷ 分母。7 ÷ 3 = 2 あまり 1 → 2と1/3。</li>
+  </ul>
+  <p>負の帯分数は全体にマイナスがつきます：<span dir="ltr">−2 1/3 = −7/3</span>。マイナス記号は整数の欄だけに入力してください。</p>
+</section>
+
+<section aria-labelledby="a-dec">
+  <h2 id="a-dec">分数と小数の変換</h2>
+  <p><strong>分数 → 小数：</strong>分子を分母で割ります。3/8 = 0.375。既約分数の分母の素因数が2と5だけなら割り切れ（有限小数）、それ以外なら <span dir="ltr">1/6 = 0.1666… = 0.1(6)</span> のような循環小数になります。</p>
+  <p><strong>小数 → 分数：</strong>小数点以下の桁数に合わせて10、100、1000…を分母にして約分します。<span dir="ltr">0.75 = 75/100 = 3/4</span>、<span dir="ltr">0.125 = 125/1000 = 1/8</span>。入力した小数はそのままの値として扱うため、0.333333 は 333333/1000000 になり、1/3 にはなりません。循環小数を正確に入れるときは、循環する部分をかっこで囲みます：<span dir="ltr">0.(3) = 1/3</span>。</p>
+</section>
+
+<section aria-labelledby="a-pct">
+  <h2 id="a-pct">分数とパーセント</h2>
+  <p>パーセント（百分率）は「100あたりいくつ」。分数に100を掛けます：<span dir="ltr">1/2 = 50%</span>、<span dir="ltr">3/4 = 75%</span>、<span dir="ltr">1/8 = 12.5%</span>。逆は100で割って約分します：<span dir="ltr">12.5% = 12.5/100 = 1/8</span>。</p>
+</section>
+
+<section aria-labelledby="a-cmp">
+  <h2 id="a-cmp">分数の大小比較と並べ替え</h2>
+  <p><strong>たすき掛け</strong>で比べると簡単です。2/3 と 3/5 なら 2 × 5 = 10、3 × 3 = 9 なので <span dir="ltr">2/3 &gt; 3/5</span>。通分しても確かめられます（10/15 と 9/15）。「大小比較」と「並べ替え」は四捨五入した小数ではなく正確なたすき掛けで判定するので、差がとても小さい分数でも正しく並びます。</p>
+</section>
+
+<section aria-labelledby="a-eq">
+  <h2 id="a-eq">等しい分数</h2>
+  <p>分子と分母に同じ数を掛けると、大きさの等しい分数ができます：<span dir="ltr">1/2 = 2/4 = 3/6 = 4/8 = 5/10</span>。約分はその逆の操作です。</p>
+</section>
+
+<section aria-labelledby="a-of">
+  <h2 id="a-of">ある数の分数を求める</h2>
+  <p>「80の3/4」は掛け算です：<span dir="ltr">3/4 × 80 = 240/4 = 60</span>。逆に「15は60の何分のいくつ？」は割り算で、<span dir="ltr">15/60 = 1/4 = 25%</span> です。</p>
+</section>
+
+<section aria-labelledby="a-lcd">
+  <h2 id="a-lcd">最大公約数・最小公倍数と公分母</h2>
+  <ul>
+    <li><strong>最大公約数</strong>：2つの数をどちらも割り切るいちばん大きい数。約分に使います。</li>
+    <li><strong>最小公倍数</strong>：2つの数のどちらでも割り切れるいちばん小さい数。分母の最小公倍数が通分の公分母になります。</li>
+  </ul>
+  <p>関係式：最小公倍数 = a × b ÷ 最大公約数。4と6なら最大公約数2、最小公倍数 = 24 ÷ 2 = 12。</p>
+</section>
+
+<section aria-labelledby="a-mist">
+  <h2 id="a-mist">よくある間違い</h2>
+  <ul>
+    <li>分母どうしを足してしまう：<span dir="ltr">1/2 + 1/3</span> は 2/5 ではありません。</li>
+    <li>割り算で逆数にするのを忘れる。</li>
+    <li>約分を忘れて 6/12 のまま答える（正しくは 1/2）。</li>
+    <li><span dir="ltr">−2 1/3</span> を −2 + 1/3 と考える。正しくは −(2 + 1/3) = −7/3。</li>
+    <li>分母の大きさだけで比べる：3/5 は 1/2 より大きい。</li>
+  </ul>
+</section>
+
+    <section class="fr-faq" aria-labelledby="fr-faq-h">
+      <h2 id="fr-faq-h">よくある質問</h2>
+            <details open>
+        <summary><h3>分数計算機とは何ですか？</h3></summary>
+        <p>分数の足し算・引き算・掛け算・割り算を行い、答えを約分した形で出すツールです。この計算機は途中式も表示し、帯分数や負の分数にも対応、答えを小数やパーセントでも表示します。</p>
+      </details>
+            <details>
+        <summary><h3>分数の足し算はどうやりますか？</h3></summary>
+        <p>分母の最小公倍数で通分してから分子を足し、最後に約分します。1/2 + 1/3 なら公分母は6なので、3/6 + 2/6 = 5/6 です。</p>
+      </details>
+            <details>
+        <summary><h3>分数の引き算はどうやりますか？</h3></summary>
+        <p>足し算と同じく通分してから分子を引きます。3/4 − 1/6 は公分母12で、9/12 − 2/12 = 7/12 です。</p>
+      </details>
+            <details>
+        <summary><h3>分数の掛け算はどうやりますか？</h3></summary>
+        <p>分子どうし、分母どうしを掛けてから約分します。2/3 × 3/4 = 6/12 = 1/2。通分は必要ありません。</p>
+      </details>
+            <details>
+        <summary><h3>分数の割り算はどうやりますか？</h3></summary>
+        <p>割る数の分数を逆数（分子と分母を入れかえたもの）にして掛けます。2/3 ÷ 4/5 = 2/3 × 5/4 = 10/12 = 5/6。0で割ることはできません。</p>
+      </details>
+            <details>
+        <summary><h3>分数の約分はどうやりますか？</h3></summary>
+        <p>分子と分母を最大公約数で割ります。24/36 の最大公約数は12なので、24/36 = 2/3 です。</p>
+      </details>
+            <details>
+        <summary><h3>分数を小数に直すには？</h3></summary>
+        <p>分子を分母で割ります。3/8 = 0.375。既約分数の分母に2と5以外の素因数があると、1/3 = 0.333… のような循環小数になります。</p>
+      </details>
+            <details>
+        <summary><h3>小数を分数に直すには？</h3></summary>
+        <p>小数点以下の桁数に合わせて10、100、1000…を分母にし、約分します。0.75 = 75/100 = 3/4。</p>
+      </details>
+            <details>
+        <summary><h3>分数をパーセントにするには？</h3></summary>
+        <p>分数に100を掛けます。3/4 × 100 = 75%、1/8 × 100 = 12.5%。</p>
+      </details>
+            <details>
+        <summary><h3>2つの分数の大小はどう比べますか？</h3></summary>
+        <p>たすき掛けで比べます。2/3 と 3/5 なら 2 × 5 = 10、3 × 3 = 9 で、10のほうが大きいので 2/3 &gt; 3/5 です。</p>
+      </details>
+            <details>
+        <summary><h3>仮分数を帯分数に直すには？</h3></summary>
+        <p>分子を分母で割り、商を整数部分、あまりを分子にします。7/3 = 2 あまり 1 なので、2と1/3 です。</p>
+      </details>
+            <details>
+        <summary><h3>通分の公分母はどう求めますか？</h3></summary>
+        <p>分母どうしの最小公倍数が最小の公分母です。4と6の最小公倍数は12なので、3/4 と 1/6 は12で通分します。</p>
+      </details>
+          </section>
+    <p class="fr-muted">計算はすべてお使いのブラウザの中で行われます。アカウントは不要で、入力した分数がサーバーに送信・保存されることはありません。</p>
+  </article>
+
+  <aside class="fr-related" aria-labelledby="fr-rel-h">
+    <h2 id="fr-rel-h">ほかの計算ツール</h2>
+    <ul>
+            <li><a href="/fraction-calculator/" hreflang="en"><strong lang="en">English</strong><span>この計算機のほかの言語版</span></a></li>
+            <li><a href="/hi/fraction-calculator/" hreflang="hi"><strong lang="hi">हिन्दी</strong><span>この計算機のほかの言語版</span></a></li>
+            <li><a href="/ur/fraction-calculator/" hreflang="ur"><strong lang="ur">اردو</strong><span>この計算機のほかの言語版</span></a></li>
+            <li><a href="/ru/fraction-calculator/" hreflang="ru"><strong lang="ru">Русский</strong><span>この計算機のほかの言語版</span></a></li>
+                  <li><a href="/garage-sale-pricing-calculator/"><strong>Garage Sale Pricing Calculator</strong><span>中古品の値付け（英語）。</span></a></li>
+            <li><a href="/date-of-birth-calculator/"><strong>Date of Birth Calculator</strong><span>生年月日から正確な年齢（英語）。</span></a></li>
+          </ul>
+  </aside>
+</main>
+
+<footer class="fr-footer">
+  <p>&copy; 2026 EasyCalculatorSmart. 計算はブラウザ内で行われます。</p>
+</footer>
+
+<script type="application/json" id="fr-config">{"digits":[2,4,6,8,10,12],"defaultDigits":6,"maxRows":10,"modes":["calc","multi","simplify","mixed","decimal","percent","compare","order","of","what","equiv"],"examples":[{"mode":"calc","a":"1/2","op":"+","b":"1/3","lbl":null},{"mode":"calc","a":"3/4","op":"-","b":"1/8","lbl":null},{"mode":"calc","a":"2/3","op":"*","b":"5/7","lbl":null},{"mode":"calc","a":"3/4","op":"/","b":"2/5","lbl":null},{"mode":"calc","a":"2 1/3","op":"+","b":"1 1/2","lbl":null},{"mode":"simplify","a":"12/18","lbl":"exSimplify"},{"mode":"mixed","a":"7/4","dir":"toMixed","lbl":"exMixed"},{"mode":"decimal","v":"0.75","dir":"toFrac","lbl":"exDecToFrac"},{"mode":"percent","a":"3/8","dir":"toPct","lbl":"exToPct"},{"mode":"compare","a":"2/3","b":"3/5","lbl":"exCompare"},{"mode":"of","a":"3/4","x":"80","lbl":"exOf"}],"lang":"ja","decimalComma":false,"ui":{"calculator":"計算機","modes":"計算の種類","skip":"計算機へ移動","language":"言語","theme":"ダーク／ライト表示を切り替え","footer":"計算はブラウザ内で行われます。","otherLang":"この計算機のほかの言語版","m_calc":"分数の計算","m_multi":"3つ以上の分数","m_simplify":"約分","m_mixed":"帯分数・仮分数","m_decimal":"小数","m_percent":"パーセント","m_compare":"大小比較","m_order":"並べ替え","m_of":"ある数の分数","m_what":"XはYの何分のいくつ？","m_equiv":"等しい分数","whole":"整数部分","num":"分子","den":"分母","wholeShort":"整数","numShort":"分子","denShort":"分母","fracA":"1つ目の分数","fracB":"2つ目の分数","fraction":"分数","fractionN":"分数 {i}","operation":"計算の記号","opAdd":"足し算","opSub":"引き算","opMul":"掛け算","opDiv":"割り算","calculate":"計算する","reset":"リセット","addRow":"分数を追加","removeRow":"この分数を削除","multiHint":"分数は10個まで入力できます。掛け算・割り算を先に、足し算・引き算をあとで計算します。","orderHint":"分数・帯分数・整数を3〜10個入力してください。","dirToImproper":"帯分数 → 仮分数","dirToMixed":"仮分数 → 帯分数","dirFracToDec":"分数 → 小数","dirDecToFrac":"小数 → 分数","dirFracToPct":"分数 → パーセント","dirPctToFrac":"パーセント → 分数","decimalInput":"小数","decHint":"0.125 のような有限小数は正確に分数になります。循環小数は循環する部分をかっこで：0.(3) = 1/3。","percentInput":"パーセント（%）","number":"数","ofWord":"×","xLabel":"X（部分）","yLabel":"Y（全体）","whatOfWord":"は次の数の何分のいくつ？","multStart":"何倍から","count":"個数","digits":"小数の桁数","examples":"例を試す","result":"答え","steps":"途中式","exactFraction":"既約分数","mixedNumber":"帯分数","decimal":"小数","percent":"パーセント","gcd":"最大公約数","lcd":"公分母（最小公倍数）","original":"もとの分数","factor":"分子・分母を割った数","comparison":"比較","asc":"小さい順","desc":"大きい順","equivList":"等しい分数","repeatingNote":"循環小数：{p}","cmpLess":"{a} は {b} より小さい。","cmpGreater":"{a} は {b} より大きい。","cmpEqual":"{a} と {b} は等しい。","ofExpr":"{x} の {f}","whatExpr":"{y} のうちの {x}","copyResult":"答えをコピー","copySteps":"途中式をコピー","share":"共有","print":"印刷","copied":"コピーしました。","visParts":"{d} 等分したうちの {n} つ分","visMixed":"{w} と、{d} 等分したうちの {n} つ分","visNeg":"負の数（大きさのみ表示）：{v}","visMore":"ほかに {k} つ分の整数","exSimplify":"{f} を約分","exMixed":"{f} を帯分数に","exDecToFrac":"{v} を分数に","exToPct":"{f} をパーセントに","exCompare":"{a} と {b} の比較","exOf":"{x} の {a}","e_empty":"分数を入力してください。","e_invalid":"各欄には整数を入力してください（例：3/4 なら 3 と 4）。","e_zero-den":"分母を0にすることはできません。","e_div-zero":"0で割ることはできません。2つ目の分数を変えてください。","e_den-empty":"分母を入力してください。","e_num-empty":"分子を入力してください。","e_too-long":"数が長すぎます（30桁まで）。","e_sign-mixed":"負の帯分数は、マイナス記号を整数部分だけにつけてください（−2と1/3）。","e_ellipsis":"「…」のある小数は正確ではありません。循環する部分をかっこで書いてください（例：0.(3)）。","e_min-rows":"分数は少なくとも {n} 個必要です。","e_max-rows":"分数は {n} 個まで入力できます。","e_y-zero":"Y を0にすることはできません。","e_mult":"倍数は1〜1000の整数で入力してください。","e_op":"計算の記号を選んでください。","st_toImproper":"帯分数 {mixed} を仮分数に直す：{w} × {d} + {n} = {top} なので {to}。","st_sameDen":"分母がすでに同じ（{d}）なので、通分は不要です。","st_lcd":"{list} の最小公倍数で通分する：公分母 = {lcd}。","st_convert":"{from} の分子と分母に {k} を掛ける → {to}。","st_addNum":"分母はそのままで分子を足す：{expr} = {sum}、つまり {res}。","st_subNum":"分母はそのままで分子を引く：{expr} = {sum}、つまり {res}。","st_combine":"公分母で分子をまとめる：{expr} = {sum}、つまり {res}。","st_opStep":"掛け算・割り算を先に計算：{a} {op} {b} = {r}。","st_reciprocal":"分数で割るには逆数を掛ける：{from} の逆数は {to}。","st_mulNum":"分子どうしを掛ける：{expr} = {r}。","st_mulDen":"分母どうしを掛ける：{expr} = {r}。","st_simplify":"{from} を約分：最大公約数 {g} で分子と分母を割る → {to}。","st_lowest":"{f} はこれ以上約分できません（既約分数）。","st_zero":"分子が0なので {from} = 0。","st_toMixed":"帯分数に直す：{from} は {q} あまり {r}（分母 {d}）→ {to}。","st_euclid":"ユークリッドの互除法で最大公約数を求める（最大公約数 = {g}）：","st_divideBoth":"分子と分母を {g} で割る：{n} ÷ {g} = {rn}、{d} ÷ {g} = {rd}。","st_divide":"分子を分母で割る：{n} ÷ {d} = {q} あまり {r}。","st_mixedResult":"商が整数部分、あまりが新しい分子になる：{res}。","st_decPlaces":"{dec} は小数第{k}位までなので {p10} を分母にする：{frac}。","st_repeatDec":"{dec} は循環しない部分が {a} 桁、循環節が {r} 桁。分数にすると {frac}。","st_longDiv":"分子を分母で割る：{n} ÷ {d}。","st_terminates":"分母 {d} の素因数は2と5だけなので、割り切れる小数（有限小数）になります。","st_repeats":"分母 {d} に2と5以外の素因数があるので、循環小数になります：{period}。","st_over100":"パーセントは「100あたり」：{p}% = {frac}。","st_times100":"100を掛けてパーセントにする：{f} × 100 = {r}。","st_pctResult":"したがって答えは {r}%。","st_pctApprox":"したがって答えは {r}%（循環）。","st_cross":"{a} と {b} をたすき掛けで比べる：{l} と {r}。","st_lcdCompare":"公分母 {lcd} で通分して確認：{a} と {b}。","st_less":"1つ目の積が小さいので {a} \u003C {b}。","st_greater":"1つ目の積が大きいので {a} \u003E {b}。","st_equal":"積が等しいので {a} = {b}。","st_orderNums":"通分したら、分子の大きさで並べます。","st_ofMul":"「の」は掛け算：{f} × {x} = {expr} = {r}。","st_whatFrac":"部分 ÷ 全体：{x} ÷ {y} = {f}。","st_equivRule":"{f} の分子と分母に同じ数を掛けると、等しい分数ができます。"},"pageUrl":"https://easycalculatorsmart.com/ja/fraction-calculator/"}</script>
+<script src="/assets/js/lib/fraction.js?v=2026.10.01" defer></script>
+<script src="/assets/js/fraction-ui.js?v=2026.10.01" defer></script>
+</body>
+</html>
